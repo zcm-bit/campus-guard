@@ -34,7 +34,7 @@ export const useUserStore = defineStore('user', {
         })
         
         if (response.success) {
-          const { token, user } = response.data
+          const { token, ...user } = response.data
           
           this.token = token
           this.loginType = loginType
